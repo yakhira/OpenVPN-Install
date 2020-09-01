@@ -20,4 +20,5 @@ sed -i 's|ca ca.crt|ca /etc/openvpn/easy-rsa/pki/ca.crt|g' /etc/openvpn/server.c
 sed -i 's|cert server.crt|cert /etc/openvpn/easy-rsa/pki/issued/server.crt|g' /etc/openvpn/server.conf
 sed -i 's|key server.key|key /etc/openvpn/easy-rsa/pki/private/server.key|g' /etc/openvpn/server.conf
 sed -i 's|dh dh2048.pem|dh /etc/openvpn/easy-rsa/pki/dh.pem|g' /etc/openvpn/server.conf
+sed -i 's|tls-auth ta.key|tls-auth /etc/openvpn/easy-rsa/private/ta.key|g' /etc/openvpn/server.conf
 sudo openvpn /etc/openvpn/server.conf
